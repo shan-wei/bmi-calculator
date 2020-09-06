@@ -37,6 +37,11 @@ const App = () => {
     });
     setState(newState);
   };
+  
+  function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
 
   const handleUndo = () => {
     setState(getData('lastState'));
@@ -84,6 +89,11 @@ const App = () => {
           ) : (
               ''
             )}
+          <div className='center'>
+             <button className = 'calculate-btn' onClick= {myFunction}>
+              Dark mode
+              </button>
+          </div>
         </div>
       </div>
     </div>
